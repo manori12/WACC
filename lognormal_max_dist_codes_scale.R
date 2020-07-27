@@ -205,6 +205,6 @@ colnames(arllnsc1)[13] <- "ARL"
 colnames(arllnsc1)[14] <- "SDRL"
 
 
-saveRDS(arllnsc1,file="arllnscc.RDs")
-readRDS("arllnscc.RDs")
+saveRDS(arllnsc1,file="arllnscale.RDs")
+readRDS("arllnscale.RDs")
 
