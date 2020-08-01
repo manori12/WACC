@@ -219,10 +219,10 @@ resultsg9<-na.omit(cbind(inputs1g9,t(outputsg9)))
 
 #-------------------ARL, SDRL for n=20----------------------------
 
-arls <- by(resultsg9[,9], INDICES=resultsg9[,3], FUN=mean,  simplify=TRUE)
-arlw <- by(resultsg9[,10], INDICES=resultsg9[,3], FUN=mean,  simplify=TRUE)
-sdrls <- by(resultsg9[,9], INDICES=resultsg9[,3], FUN=sd,  simplify=TRUE)
-sdrlw <- by(resultsg9[,10], INDICES=resultsg9[,3], FUN=sd,  simplify=TRUE)
+arls <- by(resultsg9[,9], INDICES=resultsg9[,4], FUN=mean,  simplify=TRUE)
+arlw <- by(resultsg9[,10], INDICES=resultsg9[,4], FUN=mean,  simplify=TRUE)
+sdrls <- by(resultsg9[,9], INDICES=resultsg9[,4], FUN=sd,  simplify=TRUE)
+sdrlw <- by(resultsg9[,10], INDICES=resultsg9[,4], FUN=sd,  simplify=TRUE)
 
 arlg9<-cbind(arls,sdrls,arlw,sdrlw)
 arlg9<-round(arlg9,2)
