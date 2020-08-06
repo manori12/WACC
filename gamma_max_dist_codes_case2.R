@@ -3,7 +3,7 @@ set.seed(123)
 cntrlstat <- function(n, alp, bet)
 {
   x <- rgamma(n, shape = alp, scale = bet)
-  refr <- max(x) # Set minimum, maximum,  mean, median etc as the reference point
+  refr <- max(x) 
   w <- abs(x - refr) / sum(abs(x - refr))
   y <- w * x
   ybar <- mean(y)
@@ -178,7 +178,7 @@ inputsg <- expand.grid(
   alp = alp,
   bet = bet
 )
-emg6 <- mapply(FUN = cntrlstat, inputsg$n, inputsg$alp, inputsg$bet)
+emg18 <- mapply(FUN = cntrlstat, inputsg$n, inputsg$alp, inputsg$bet)
 
 tremg18 <- t(emg18)
 emsg18 <- tremg18[, 1]
