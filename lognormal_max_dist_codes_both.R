@@ -3,7 +3,7 @@ set.seed(123)
 cntrlstat <- function(n, mu, sig)
 {
   x <- rlnorm(n, mu, sig)
-  refr <- max(x) # Set minimum, maximum,  mean, median etc as the reference point
+  refr <- max(x) 
   w <- abs(x - refr) / sum(abs(x - refr))
   y <- w * x
   ybar <- mean(y)
@@ -183,8 +183,8 @@ sdrlw <- by(results20[,10], INDICES=results20[,3:4], FUN=sd,  simplify=TRUE)
 
 arl20<-cbind(arls,sdrls,arlw,sdrlw)
 arl20<-round(arl20,2)
-saveRDS(arl20,file="arlln20lo.RDs")
-readRDS("arlln20lo.RDs")
+saveRDS(arl20,file="arlln20bo.RDs")
+readRDS("arlln20bo.RDs")
 
 
 
