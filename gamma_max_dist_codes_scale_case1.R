@@ -3,7 +3,7 @@ set.seed(123)
 cntrlstat <- function(n, alp, bet)
 {
   x <- rgamma(n, shape = alp, scale = bet)
-  refr <- max(x) # Set minimum, maximum,  mean, median etc as the reference point
+  refr <- max(x) 
   w <- abs(x - refr) / sum(abs(x - refr))
   y <- w * x
   ybar <- mean(y)
